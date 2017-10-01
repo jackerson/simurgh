@@ -1,32 +1,40 @@
 # Caffeine
-By: Keian Pirie, Faisal Lalani, Ian Brobin, Karl Todd and Jamie Ackerson
+<b>Created by Keian Pirie, Faisal Lalani, Ian Brobin, Karl Todd and Jamie Ackerson</b>
 
-Description:
+<p align="center">
+<img src="https://img.shields.io/badge/version-1.0-brightgreen.svg">
+<img src="https://img.shields.io/badge/platform-iOS & Android-blue.svg">
+<img src="https://img.shields.io/badge/stage-development-red.svg">
+</p>
+
+## Overview
+
+#### Description
 Caffeine is a mobile application on iOS and Android devices that acts as a scheduler to meet students' needs organizing their schoolwork.
 
-Vision Statement:
+#### Vision Statement
 Caffeine is a student-exclusive network that allows its users to keep track of homework, tests, and other deadlines as well as provide general communication for each of their classes. 
 
-Motivation:
+#### Motivation
 Initially our group was brainstorming various ideas to improve student's experiences on campus. Because this is a software development class, that process involved thinking about how to integrate practices that currently aren't connected online, for example, the excess amount of posters displayed across CU Boulder's campus. We then arrived at a more useful concept to have a hub for all of our class' due dates and major deadlines since there isn't an app that conects all the platforms (Moodle, D2L, Piazza etc.) that CU implements.
 
-Risks:
+#### Risks
 1) not knowing android
 2) consistent meeting times
 3) syncing up the iOS and Android development phases
-4) creating back and frontend simultaneously?
+4) creating back and frontend simultaneously (?)
 
-Risk Mitigation Plan:
+#### Risk Mitigation Plan
 1) online tutorials
 2) 
 3) 
 4) 
 
-Version Control:
-We are using GitHub as our version control method because it is the only system that all of our teammates are familiar with. The link to our project is https://github.com/fasilmlalani/caffeineapp/. 
+#### Version Control
+We are using GitHub as our version control method because it is the only system that all of our teammates are familiar with. Our project repo is contained <a href="https://github.com/fasilmlalani/caffeineapp/">here</a>.
 
-Development Method:
-Our group is going to use the agile methodology. 
+#### Development Method
+Our group is going to use the Agile methodology. 
 
-Collaboration Tool:
+#### Collaboration Tool
 We've chosen to use Slack to communication throughout this project.
