@@ -1,5 +1,5 @@
 # Simurgh
-<b>Created by Keian Pirie, Faisal Lalani, Ian Brobin, Karl Todd and Jamie Ackerson</b>
+<b>Created by Keiran Pirie, Faisal Lalani, Ian Brobin, Karl Todd and Jamie Ackerson</b>
 
 <p align="center">
 <img src="https://img.shields.io/badge/version-1.0-brightgreen.svg">
@@ -29,7 +29,7 @@ Learning anything is hard; not because of lack of information, but because of to
 3) Online tutorials and the CS department
 
 #### Version Control
-We are using GitHub as our version control method because it is the only system that all of our teammates are familiar with. Our project repo is contained here, https://github.com/fasilmlalani/caffeineapp/.
+We are using GitHub as our version control method because it is the only system that all of our teammates are familiar with.
 
 #### Development Method
 Our group is going to use the Agile methodology.
