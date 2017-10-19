@@ -5,7 +5,7 @@
 <title>Submit</title>
 </head>
 <body>
-<form enctype="multipart/form-data" action="sourses.php">
+<form enctype="multipart/form-data" action="sources.php">
 	Topic:&nbsp 
 		<select name="topic" >
 			<option value="Computer Science"> Computer Science </option>
