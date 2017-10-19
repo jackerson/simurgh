@@ -1,4 +1,4 @@
-# Caffeine
+# Simurgh
 <b>Created by Keian Pirie, Faisal Lalani, Ian Brobin, Karl Todd and Jamie Ackerson</b>
 
 <p align="center">
@@ -10,25 +10,23 @@
 ## Overview
 
 #### Description
-Caffeine is a mobile application on iOS and Android devices that acts as a scheduler to meet students' needs organizing their schoolwork.
+Simurgh is a learning source compiler that presents you with a collage of resources that help you get starting in your journey towards researching a new topic.
 
 #### Vision Statement
-Caffeine is a student-exclusive network that allows its users to keep track of homework, tests, and other deadlines as well as provide general communication for each of their classes. 
+Learners for any field have a plethora of information available to them on the internet. However, filtering out irrelevancy and inaccuracy is one of the biggest barriers in trying to make sense of this information. With Sigmurgh, learners will be able to enter their new interest with a tighter and more refined list of links to articles, papers, tutorials, videos, and more.
 
 #### Motivation
-Initially our group was brainstorming various ideas to improve student's experiences on campus. Because this is a software development class, that process involved thinking about how to integrate practices that currently aren't connected online, for example, the excess amount of posters displayed across CU Boulder's campus. We then arrived at a more useful concept to have a hub for all of our class' due dates and major deadlines since there isn't an app that conects all the platforms (Moodle, D2L, Piazza etc.) that CU implements.
-
-Our motivation to create Caffeine came from the shared frustration of having to use multiple vendors for Computer Science classes in addition to Desire2Learn for the majority of other classes at the University of Colorado Boulder. Our hope is to integrate the platforms students are required to use for each of their classes into a single application that allows them to view assignment deadines, be reminded of quiz and exam dates as well as communicate with their classmates in a disscusion board.
+Learning anything is hard; not because of lack of information, but because of too much. The ability to fitler out what's a good source and what isn't can be a huge game-changer in a world where the ability to learn any topic or skill is at our fingertips at every given moment.
 
 #### Risks
-1) Not knowing android development
+1) Figuring out a way to generate sources for any given topic
 2) Planning consistent meeting times
-3) Syncing up the iOS and Android development phases
+3) Picking up on gaps in our knowledge in web development
 
 #### Risk Mitigation Plan
-1) Online tutorials!
+1) Discussion with professors on machine learning algorithms
 2) Giving as many updates on our Slack channel so everyone is aware of what our progress is if not every member is able to attend a particular meeting.
-3) Problem-solving our issues together so one half of the development team isn't behind the other as the project moves forward.
+3) Online tutorials and the CS department
 
 #### Version Control
 We are using GitHub as our version control method because it is the only system that all of our teammates are familiar with. Our project repo is contained here, https://github.com/fasilmlalani/caffeineapp/.
