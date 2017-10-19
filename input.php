@@ -6,9 +6,23 @@
 </head>
 <body>
 <form enctype="multipart/form-data" action="sourses.php">
-	<p>Topic:&nbsp <input type="text" name="topic" size="10" maxlength="11" /></p>
-	<p>Sub Topic:&nbsp <input type="text" name="subTopic" size="10" maxlength="20" /></p>
-	<p>Difficulty:&nbsp <input type="text" name="difficulty" size="10" maxlength="30" /></p>
+	Topic:&nbsp 
+		<select name="topic" >
+			<option value="Computer Science"> Computer Science </option>
+		</select><br>
+	Sub Topic:&nbsp
+		<select name="subTopic">
+			<option value="Algorithms"> Algorithms </option>
+			<option value="Data Structures"> Data Structures </option>
+			<option value="Machine Learning">Machine Learning </option>
+			<option value="Web Development"> Web Development </option>
+		</select><br>
+	Difficulty:&nbsp 
+		<select name="difficulty">
+			<option value="Easy"> Easy </option>
+			<option value="Intermediate"> Intermediate </option>
+			<option value="Advanced"> Advanced </option>
+		</select><br>
 <input type="submit" value="Search" />
 </form>
 <?php

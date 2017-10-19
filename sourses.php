@@ -6,7 +6,13 @@
 </head>
 <body>
 <?php
-	echo "Hello World"
+	echo "Input Received as:<br>";
+	$topic = $_REQUEST['topic'];
+	$subTopic = $_REQUEST['subTopic'];
+	$difficulty = $_REQUEST['difficulty'];
+	echo "Topic = $topic<br>";
+	echo "SubTopic = $subTopic<br>";
+	echo "difficulty = $difficulty<br>";
 ?>
 </body>
 </html>
