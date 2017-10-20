@@ -31,12 +31,24 @@ CREATE TABLE if not exists `subtopic` (
 -- [Table `subtopic` is empty]
 
 CREATE TABLE if not exists `topic` (
-   `id` int(32) unsigned not null,
+   `id` int(32) unsigned not null auto_increment,
    `name` varchar(32) not null,
    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- [Table `topic` is empty]';
+-- [Table `topic` is empty]
+
+insert into topic(id, name) values
+(1, "Computer Science");
+
+insert into subtopic(id, topicId, name) values
+(1, 1, "Algorithms"),
+(2, 1, "Data Structures"),
+(3, 1, "Machine Learning"),
+(4, 1, "Web Development");
+
+--KEEP THIS COMMENT ON BOTTOM
+';
 $queryArr = explode(";",$query);
 for($i = 0; $i < sizeof($queryArr); $i++)
 {
