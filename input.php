@@ -2,20 +2,39 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Submit</title>
+<title>Search Page</title>
 </head>
 <body>
+<?php
+	$connection = @mysqli_connect ("localhost", "root",
+	"", "simurgh");
+	if(mysqli_connect_errno())
+		die("FALIED TO CONNECT TO DATABASE");
+?>
 <form enctype="multipart/form-data" action="sources.php">
 	Topic:&nbsp 
 		<select name="topic" >
-			<option value="Computer Science"> Computer Science </option>
+		<!-- List topics with php -->
+			<?php
+				$query = "SELECT name from topic order by name";
+				$result = mysqli_query($connection, $query);
+				while($row = mysqli_fetch_array($result))
+				{
+					echo "<option value='$row[0]'>$row[0]</option>";
+				}
+			?>
 		</select><br>
 	Sub Topic:&nbsp
 		<select name="subTopic">
-			<option value="Algorithms"> Algorithms </option>
-			<option value="Data Structures"> Data Structures </option>
-			<option value="Machine Learning">Machine Learning </option>
-			<option value="Web Development"> Web Development </option>
+		<!-- List subtopics with php -->
+			<?php
+				$query = "SELECT name from subtopic order by name";
+				$result = mysqli_query($connection, $query);
+				while($row = mysqli_fetch_array($result))
+				{
+					echo "<option value='$row[0]'>$row[0]</option>";
+				}
+			?>
 		</select><br>
 	Difficulty:&nbsp 
 		<select name="difficulty">
