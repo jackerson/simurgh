@@ -7,7 +7,9 @@
 		die("FALIED TO CONNECT TO DATABASE");
 	//Mysql query
 	$query='
-
+drop table links;
+drop table subtopic;
+drop table topic;
 CREATE TABLE if not exists `links` (
    `id` int(32) not null auto_increment,
    `subTopicId` int(32) not null,
