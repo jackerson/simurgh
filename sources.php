@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Submit</title>
+<title>Links</title>
 </head>
 <body>
 <?php
@@ -34,6 +34,11 @@
 	</select><br>
 	URL:
 	<input name="URL" type="text"><br>
+	<!-- Data that was already passed earlier -->
+	<?php
+		echo "<input type='hidden' name='topic' value='$topic'>";
+		echo "<input type='hidden' name='subTopic' value='$subTopic'>";
+	?>
 	<input type="submit" value="Submit">
 </form>
 </body>
