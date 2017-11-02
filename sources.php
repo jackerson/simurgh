@@ -36,7 +36,7 @@
 	<input name="URL" type="text"><br>
 	<!-- Data that was already passed earlier -->
 	<?php
-		echo "<input type='hidden' name='topic' value='$topic'>";
+		//echo "<input type='hidden' name='topic' value='$topic'>";
 		echo "<input type='hidden' name='subTopic' value='$subTopic'>";
 	?>
 	<input type="submit" value="Submit">
