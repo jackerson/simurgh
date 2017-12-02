@@ -17,7 +17,7 @@
 	if(!mysqli_stmt_execute($checkQuery)){
 		die("Checking Failed: ".mysqli_error($connection));
 	}
-	//If we are able to fetch an element, then a URL already exists
+	//If we are able to fetch an element, then a email already exists
 	if(mysqli_stmt_fetch($checkQuery))
 	{
 		die("I'm Sorry, but an account exits that already has your email!");
