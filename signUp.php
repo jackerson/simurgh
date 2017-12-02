@@ -12,6 +12,7 @@
 </head>
 <body>
 <?php
+	include "included.php";
 	$email = $_REQUEST['email'];
 	$pword = $_REQUEST['password'];
 	$pword2 = $_REQUEST['password2'];

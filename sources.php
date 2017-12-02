@@ -6,6 +6,7 @@
 </head>
 <body>
 <?php
+	include "included.php";
 	echo "Input Received as:<br>";
 	$topic = $_REQUEST['topic'];
 	$subTopic = $_REQUEST['subTopic'];
@@ -38,6 +39,8 @@
 	<?php
 		//echo "<input type='hidden' name='topic' value='$topic'>";
 		echo "<input type='hidden' name='subTopic' value='$subTopic'>";
+		
+		mysqli_close($connection);
 	?>
 	<input type="submit" value="Submit">
 </form>

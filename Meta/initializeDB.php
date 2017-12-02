@@ -1,7 +1,7 @@
 <?php
  //NOTE: You need to create an empty database named simurgh on your sql command line before you run this
  //Connect to server
-	$connection = @mysqli_connect ("localhost", "root",
+	$connection = @mysqli_connect ("127.0.0.1", "root",
 	"", "simurgh");
 	if(mysqli_connect_errno())
 		die("FALIED TO CONNECT TO DATABASE");
