@@ -19,7 +19,26 @@
 	$quality = $_REQUEST['quality'];
 	$url = $_REQUEST['URL'];
 	
-	//TODO:Make duplicate checking better, so that google.com and www.google.com are different. (Once option would be to format all links in a consistent way
+	//TODO:Make duplicate checking better, so that google.com and www.google.com are different. (Once option would be to format all links in a consistent way        if(isset($_GET['site_url']) ){
+		$url = $_GET['site_url'];
+
+		$dupe = mysql_query("SELECT * FROM $tbl_name WHERE URL = '$url'") or die (mysql_error());
+		$num_rows = mysql_num_rows($dupe);
+		if ($num_rows > 0) {
+			echo 'Error! Already on our database'; 
+		}
+		else {
+			$insertSite_sql = "INSERT INTO $tbl_name (URL) VALUES('$url')";
+			mysql_query($insertSite_sql) or die (mysql_error());
+			echo $url;
+			echo 'added to database'
+
+		}
+
+	}
+	else {
+		echo 'Error! Please fill all fields'
+	}
 	//TODO: Take care of SQL injection
 	$checkQuery = mysqli_prepare($connection, "SELECT * from links where url = ? AND subTopicId =(SELECT id from subtopic where name = ?)");
 	mysqli_stmt_bind_param($checkQuery,"ss",$url, $subTopic);
