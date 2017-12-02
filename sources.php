@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-	include "included.php"
+	include "included.php";
 	echo "Input Received as:<br>";
 	$topic = $_REQUEST['topic'];
 	$subTopic = $_REQUEST['subTopic'];
