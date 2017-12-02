@@ -36,7 +36,7 @@
 	</head>
 	<body>
 		<h1>Simurgh!</h1></br>
-		<p> Welcome to Simurgh! To confirm your account <a href='emailVerification.php?email=$email'> Click Here</a></p>
+		<p> Welcome to Simurgh! To confirm your account <a href='localhost/simurgh/emailVerification.php?email=$email'> Click Here</a></p>
 	</body>
 	</html>
 	";
