@@ -4,7 +4,7 @@
 	$connection = @mysqli_connect ("localhost", "root",
 	"", "simurgh");
 	if(mysqli_connect_errno())
-		die("FALIED TO CONNECT TO DATABASE");
+		die("FALIED TO CONNECT TO DATABASE:".mysqli_connect_error());
 	//Mysql query
 	$query='
 drop table links;
