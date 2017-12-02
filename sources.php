@@ -6,50 +6,54 @@
 </head>
 <body>
 <?php
-	include "included.php";
-	echo "Input Received as:<br>";
+	
 	$topic = $_REQUEST['topic'];
 	$subTopic = $_REQUEST['subTopic'];
 	$difficulty = $_REQUEST['difficulty'];
-	if(!isset($topic)){
+	if(!isser($topic)){
 		die("No topic input, please try again");
 	}
-	
+
 	if(!isset($subTopic)){
-		die("No subTopic input, please try again");
+		die("No SubTopic input, please try again");
 	}
-	
+
 	if(!isset($difficulty)){
 		die("No difficulty input, please try again");
 	}
+	
+	
+	echo "Topic = $topic<br>";
+	echo "SubTopic = $subTopic<br>";
+	echo "difficulty = $difficulty<br>";
 
 ?>
 <h2> Add Link to Page </h2>
 <form action="addLink.php" method="post">
 	Type: 
 	<select name="type" >
-		<option value='link'>Link</option>
+		<option value='article'>Article</option>
+		<option value='tutorial'>Tutorial</option>
+		<option value='video'>Video</option>
+		<option value='paper'>Paper</option>
+		<option value='course'>Course</option>
+		
 	</select><br>
 	Difficulty:
 	<select name="difficulty" >
 		<option value='0'>Easy</option>
 		<option value='1'>Medium</option>
 		<option value='2'>Hard</option>
+		
 	</select><br>
-	Quality:
-	<select name="quality" >
-		<option value='0'>Poor</option>
-		<option value='1'>Medium</option>
-		<option value='2'>Excellent</option>
-	</select><br>
+	
 	URL:
 	<input name="URL" type="text"><br>
 	<!-- Data that was already passed earlier -->
 	<?php
 		//echo "<input type='hidden' name='topic' value='$topic'>";
 		echo "<input type='hidden' name='subTopic' value='$subTopic'>";
-		
-		mysqli_close($connection);
+
 	?>
 	<input type="submit" value="Submit">
 	<?php
