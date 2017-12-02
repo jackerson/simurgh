@@ -31,9 +31,15 @@
 	if($pword != $pword2){
 		die("Passwords do not match, sorry");
 	}
-	$insertQuery = mysqli_prepare($connection, "Insert into users (email, password) values (?, ?)");
+	//Email Checking/Sending
+	//TODO ADD LINK
+	if(!mail($email, "Simurgh Verification", "Welcome to simurgh!"))
+	{
+		die("Unable to send confirmation email. Is $email your email?");
+	}
+	$insertQuery = mysqli_prepare($connection, "Insert into users (email, password, verified) values (?, ?, 0)");
 	//hashes the password
-	$pwordHash = password_hash($pword);
+	$pwordHash = password_hash($pword, PASSWORD_DEFAULT);
 	mysqli_stmt_bind_param($insertQuery, "ss", $email, $pwordHash);
 	
 	if(mysqli_stmt_execute($insertQuery))
@@ -44,7 +50,6 @@
 	{
 		die("Insert Failed: ".mysqli_error($connection));
 	}
-	//TODO: SEND EMAIL
 	
 	mysqli_close($connection);
 ?>

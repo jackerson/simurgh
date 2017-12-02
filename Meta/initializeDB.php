@@ -16,6 +16,7 @@ CREATE TABLE if not exists users(
 	`id` int(32) not null auto_increment,
 	`email` text not null,
 	`password` varchar(255),
+	`verified` int(1) DEFAULT 0,
 	PRIMARY KEY (`id`)
 );
 CREATE TABLE if not exists `links` (
