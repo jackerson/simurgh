@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Welcome</title>
 <?php
-	$connection = @mysqli_connect ("localhost", "root",
+	$connection = @mysqli_connect ("127.0.0.1", "root",
 	"", "simurgh");
 	if(mysqli_connect_errno())
 		die("FALIED TO CONNECT TO DATABASE");
@@ -25,7 +25,7 @@
 	//If we are able to fetch an element, then a URL already exists
 	if(mysqli_stmt_fetch($checkQuery))
 	{
-		die("I'm Sorry, but one another user has already submitted this link!");
+		die("I'm Sorry, but an account exits that already has your email!");
 	}
 	//Password checking
 	if($pword != $pword2){
@@ -33,7 +33,24 @@
 	}
 	//Email Checking/Sending
 	//TODO ADD LINK
-	if(!mail($email, "Simurgh Verification", "Welcome to simurgh!"))
+	
+	$message = "
+	<html>
+	<head>
+		<title>Confirmation Email</title>
+	</head>
+	<body>
+		<h1>Simurgh!</h1></br>
+		<p> Welcome to Simurgh! To confirm your account <a href='emailVerification.php?email=$email'> Click Here</a></p>
+	</body>
+	</html>
+	";
+	$headers[] = 'MIME-Version: 1.0';
+	$headers[] = 'Content-type: text/html; charset=iso-8859-1';
+	//TODO: Add from
+	$headers[] = 'From: Simurgh <ian.brobin@colorado.edu>';
+	$isMailed = mail($email, "Simurgh Verification", $message, implode("\r\n", $headers));
+	if(!$isMailed)
 	{
 		die("Unable to send confirmation email. Is $email your email?");
 	}
