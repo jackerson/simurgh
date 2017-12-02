@@ -3,15 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Add Link</title>
-<?php
-	$connection = @mysqli_connect ("127.0.0.1", "root",
-	"", "simurgh");
-	if(mysqli_connect_errno())
-		die("FALIED TO CONNECT TO DATABASE");
-?>
 </head>
 <body>
 <?php
+	include "included.php";
 	//$topic = $_REQUEST['topic'];
 	$subTopic = $_REQUEST['subTopic'];
 	$difficulty = $_REQUEST['difficulty'];

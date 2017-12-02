@@ -4,9 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Sorting</title>
 <?php
-	$connection = @mysqli_connect ("127.0.0.1", "root", "", "simurgh");
-	if(mysqli_connect_errno())
-		die("FAILED TO CONNECT TO DATABASE");
+	include "included.php";
 ?>
 </head>
 <body>
@@ -15,6 +13,7 @@
 	$difficulty = $_REQUEST['difficulty'];
 	$topic = $_REQUEST['topic'];
 	
+	mysqli_close($connection);
 ?>
 </body>
 </html>	
