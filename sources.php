@@ -11,9 +11,18 @@
 	$topic = $_REQUEST['topic'];
 	$subTopic = $_REQUEST['subTopic'];
 	$difficulty = $_REQUEST['difficulty'];
-	echo "Topic = $topic<br>";
-	echo "SubTopic = $subTopic<br>";
-	echo "difficulty = $difficulty<br>";
+	if(!isset($topic)){
+		die("No topic input, please try again");
+	}
+	
+	if(!isset($subTopic)){
+		die("No subTopic input, please try again");
+	}
+	
+	if(!isset($difficulty)){
+		die("No difficulty input, please try again");
+	}
+
 ?>
 <h2> Add Link to Page </h2>
 <form action="addLink.php" method="post">
@@ -43,6 +52,11 @@
 		mysqli_close($connection);
 	?>
 	<input type="submit" value="Submit">
+	<?php
+		while($row = mysql_fetch_array($result)){
+			
+		}
+	?>
 </form>
 </body>
 </html>
