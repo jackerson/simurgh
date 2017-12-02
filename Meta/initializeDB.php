@@ -10,6 +10,14 @@
 drop table links;
 drop table subtopic;
 drop table topic;
+drop table users;
+
+CREATE TABLE if not exists users(
+	`id` int(32) not null auto_increment,
+	`email` text not null,
+	`password` varchar(255),
+	PRIMARY KEY (`id`)
+);
 CREATE TABLE if not exists `links` (
    `id` int(32) not null auto_increment,
    `subTopicId` int(32) not null,
@@ -44,7 +52,7 @@ insert into subtopic(id, topicId, name) values
 (3, 1, "Machine Learning"),
 (4, 1, "Web Development");
 
-insert into links(id, subTopicId, type, 
+
 
 --KEEP THIS COMMENT ON BOTTOM
 ';
@@ -63,4 +71,5 @@ for($i = 0; $i < sizeof($queryArr); $i++)
 		echo "<br>";
 	}
 }
+mysqli_close($connection);
 ?>
