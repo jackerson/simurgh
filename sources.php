@@ -36,7 +36,7 @@
 		<option value='video'>Video</option>
 		<option value='paper'>Paper</option>
 		<option value='course'>Course</option>
-		,
+		
 	</select><br>
 	Difficulty:
 	<select name="difficulty" >
