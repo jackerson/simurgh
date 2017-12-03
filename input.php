@@ -19,10 +19,7 @@
 </nav>
 
 <?php
-	$connection = @mysqli_connect ('127.0.0.1', 'root',
-	'create', 'simurgh');
-	if(mysqli_connect_errno())
-		die("FAILED TO CONNECT TO DATABASE".mysqli_connect_error());
+	include "included.php";
 ?>
 
 <img src="logo.jpg" width="200px" height="200px">
