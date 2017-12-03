@@ -23,9 +23,7 @@
 	}
 	
 	
-	echo "Topic = $topic<br>";
-	echo "SubTopic = $subTopic<br>";
-	echo "difficulty = $difficulty<br>";
+	
 ?>
 <h2> Add Link to Page </h2>
 <form action="addLink.php" method="post">
@@ -39,7 +37,7 @@
 		
 	</select><br>
 	Difficulty:
-	<select name="difficulty" >
+	<select name="Difficulty" >
 		<option value='0'>Easy</option>
 		<option value='1'>Medium</option>
 		<option value='2'>Hard</option>
