@@ -11,6 +11,7 @@
 	$subTopic = $_REQUEST['subTopic'];
 	$difficulty = $_REQUEST['difficulty'];
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if(!isset($topic)){
 		die("No topic input, please try again");
 	}
@@ -24,6 +25,8 @@
 	}
 
 =======
+=======
+>>>>>>> 84420f4864b2a366916c4d8bc7eccdb9641d1964
 	if(!isser($topic)){
 		die("No topic input, please try again");
 	}
@@ -40,7 +43,11 @@
 	echo "Topic = $topic<br>";
 	echo "SubTopic = $subTopic<br>";
 	echo "difficulty = $difficulty<br>";
+<<<<<<< HEAD
 >>>>>>> 280a1379d25cc3f9f40365071eaf0409dfbc455d
+=======
+
+>>>>>>> 84420f4864b2a366916c4d8bc7eccdb9641d1964
 ?>
 <h2> Add Link to Page </h2>
 <form action="addLink.php" method="post">
