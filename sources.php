@@ -22,19 +22,6 @@
 	if(!isset($difficulty)){
 		die("No difficulty input, please try again");
 	}
-
-	if(!isser($topic)){
-		die("No topic input, please try again");
-	}
-
-	if(!isset($subTopic)){
-		die("No SubTopic input, please try again");
-	}
-
-	if(!isset($difficulty)){
-		die("No difficulty input, please try again");
-	}
-	
 	
 	echo "Topic = $topic<br>";
 	echo "SubTopic = $subTopic<br>";
