@@ -22,10 +22,6 @@
 	if(!isset($difficulty)){
 		die("No difficulty input, please try again");
 	}
-	
-	echo "Topic = $topic<br>";
-	echo "SubTopic = $subTopic<br>";
-	echo "difficulty = $difficulty<br>";
 
 ?>
 <h2> Add Link to Page </h2>
