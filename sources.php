@@ -56,11 +56,6 @@
 
 	?>
 	<input type="submit" value="Submit">
-	<?php
-		while($row = mysql_fetch_array($result)){
-			
-		}
-	?>
 </form>
 </body>
 </html>
