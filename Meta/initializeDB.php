@@ -15,7 +15,7 @@ drop table passwordChange;
 CREATE TABLE if not exists passwordChange(
 	`id` int not null auto_increment,
 	`userId` int not null,
-	`key` varchar(255),
+	`keyHash` varchar(255) not null,
 	`time` int not null,
 	PRIMARY KEY(`id`)
 );
@@ -59,7 +59,6 @@ insert into subtopic(id, topicId, name) values
 (2, 1, "Data Structures"),
 (3, 1, "Machine Learning"),
 (4, 1, "Web Development");
-
 
 
 --KEEP THIS COMMENT ON BOTTOM

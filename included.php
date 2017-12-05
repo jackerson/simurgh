@@ -25,6 +25,14 @@ function generateRandomString($length = 20) {
     return $randomString;
 }
 
+function sendEmail($to, $subject, $htmlMsg){
+	$headers[] = 'MIME-Version: 1.0';
+	$headers[] = 'Content-type: text/html; charset=iso-8859-1';
+	//TODO: Add from
+	$headers[] = 'From: Simurgh <ian.brobin@colorado.edu>';
+	return mail($to, $subject, $htmlMsg, implode("\r\n", $headers));
+}
+
 if(isset($_SESSION["email"])){
 	$email = $_SESSION["email"];
 	echo "$email is signed in. <a href='logout.php'>Click Here</a> to sign out</br>";

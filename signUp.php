@@ -36,15 +36,11 @@
 	</head>
 	<body>
 		<h1>Simurgh!</h1></br>
-		<p> Welcome to Simurgh! To confirm your account <a href='localhost/simurgh/emailVerification.php?email=$email'> Click Here</a></p>
+		<p> Welcome to Simurgh! To confirm your account <a href='localhost/simurgh/emailVerification.php?email=$email'>Click Here</a></p>
 	</body>
 	</html>
 	";
-	$headers[] = 'MIME-Version: 1.0';
-	$headers[] = 'Content-type: text/html; charset=iso-8859-1';
-	//TODO: Add from
-	$headers[] = 'From: Simurgh <ian.brobin@colorado.edu>';
-	$isMailed = mail($email, "Simurgh Verification", $message, implode("\r\n", $headers));
+	$isMailed = sendEmail($email, "Simurgh Verification", $message);
 	if(!$isMailed)
 	{
 		die("Unable to send confirmation email. Is $email your email?");
