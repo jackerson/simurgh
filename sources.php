@@ -6,15 +6,15 @@
 </head>
 <body>
 <?php
-	if(!isset($topic)){
+	if(!isset($_REQUEST['topic'])){
 		die("No topic input, please try again");
 	}
 	
-	if(!isset($subTopic)){
+	if(!isset($_REQUEST['subTopic'])){
 		die("No subTopic input, please try again");
 	}
 	
-	if(!isset($difficulty)){
+	if(!isset($_REQUEST['difficulty'])){
 		die("No difficulty input, please try again");
   }
   
