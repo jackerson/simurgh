@@ -11,7 +11,14 @@ drop table links;
 drop table subtopic;
 drop table topic;
 drop table users;
-
+drop table passwordChange;
+CREATE TABLE if not exists passwordChange(
+	`id` int not null auto_increment,
+	`userId` int not null,
+	`key` varchar(255),
+	`time` int not null,
+	PRIMARY KEY(`id`)
+);
 CREATE TABLE if not exists users(
 	`id` int(32) not null auto_increment,
 	`email` text not null,
