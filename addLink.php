@@ -41,6 +41,8 @@
 			die("Insert Failed: ".mysqli_error($connection));
 		}
 	}
+	
+	mysqli_close($connection);
 ?>
 </body>
 </html>
