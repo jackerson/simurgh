@@ -16,8 +16,8 @@
 		echo "<input type='hidden' name='userId' value='$userId'/>";
 		echo "<input type='hidden' name='key' value='$key'/>";
 	?>
-	New Password:<input type = 'text' name = 'password'/></br>
-	Retype Password:<input type = 'text' name = 'password2'/></br>
+	New Password:<input type = 'password' name = 'password'/></br>
+	Retype Password:<input type = 'password' name = 'password2'/></br>
 	<input type="submit" value="submit"/>
 </form>
 <?php	

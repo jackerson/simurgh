@@ -47,8 +47,9 @@
 	$isMailed = sendEmail($email, "Simurgh Reset Password", $message);
 	if(!$isMailed)
 	{
-		die("Unable to send confirmation email. Is $email your email?");
+		die("Unable to send reset email. Is $email your email?");
 	}
+	echo "Reset email sent. Link will deactivate in 30 minutes";
 	mysqli_close($connection);
 ?>
 </body>
