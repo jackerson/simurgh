@@ -6,11 +6,6 @@
 </head>
 <body>
 <?php
-	
-	$topic = $_REQUEST['topic'];
-	$subTopic = $_REQUEST['subTopic'];
-	$difficulty = $_REQUEST['difficulty'];
-
 	if(!isset($topic)){
 		die("No topic input, please try again");
 	}
@@ -21,8 +16,11 @@
 	
 	if(!isset($difficulty)){
 		die("No difficulty input, please try again");
-	}
-
+  }
+  
+	$topic = $_REQUEST['topic'];
+	$subTopic = $_REQUEST['subTopic'];
+	$difficulty = $_REQUEST['difficulty'];
 ?>
 <h2> Add Link to Page </h2>
 <form action="addLink.php" method="post">
@@ -36,7 +34,7 @@
 		
 	</select><br>
 	Difficulty:
-	<select name="difficulty" >
+	<select name="Difficulty" >
 		<option value='0'>Easy</option>
 		<option value='1'>Medium</option>
 		<option value='2'>Hard</option>
