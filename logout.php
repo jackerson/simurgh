@@ -8,6 +8,7 @@
 <?php
 	include "included.php";
 	session_unset();
+	echo "You have been logged out."
 	mysqli_close($connection);
 ?>
 </body>
