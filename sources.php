@@ -6,17 +6,10 @@
 </head>
 <body>
 <?php
-<<<<<<< HEAD
-	
-	$topic = $_REQUEST['topic'];
-	$subTopic = $_REQUEST['subTopic'];
-	$difficulty = $_REQUEST['difficulty'];
-	
 
-	if(!isser($topic)){
-=======
+
 	if(!isset($_REQUEST['topic'])){
->>>>>>> 252bb2b9b14749d8ae4631295de97533ce4e9204
+
 		die("No topic input, please try again");
 	}
 	
