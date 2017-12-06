@@ -60,6 +60,7 @@ insert into subtopic(id, topicId, name) values
 (3, 1, "Machine Learning"),
 (4, 1, "Web Development");
 
+INSERT INTO `users` VALUES(1, "ianbrobin@yahoo.com", "$2y$10$kShWzgfk7wFbxvlkIK2.SejjSQ3zfrghgVMn1HkUehsK.NTQkciNC", 0);
 
 --KEEP THIS COMMENT ON BOTTOM
 ';
