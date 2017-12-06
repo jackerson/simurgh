@@ -6,6 +6,7 @@
 </head>
 <body>
 <?php
+<<<<<<< HEAD
 	
 	$topic = $_REQUEST['topic'];
 	$subTopic = $_REQUEST['subTopic'];
@@ -13,19 +14,23 @@
 	
 
 	if(!isser($topic)){
+=======
+	if(!isset($_REQUEST['topic'])){
+>>>>>>> 252bb2b9b14749d8ae4631295de97533ce4e9204
 		die("No topic input, please try again");
 	}
-
-	if(!isset($subTopic)){
-		die("No SubTopic input, please try again");
+	
+	if(!isset($_REQUEST['subTopic'])){
+		die("No subTopic input, please try again");
 	}
-
-	if(!isset($difficulty)){
+	
+	if(!isset($_REQUEST['difficulty'])){
 		die("No difficulty input, please try again");
-	}
-	
-	
-	
+  }
+  
+	$topic = $_REQUEST['topic'];
+	$subTopic = $_REQUEST['subTopic'];
+	$difficulty = $_REQUEST['difficulty'];
 ?>
 <h2> Add Link to Page </h2>
 <form action="addLink.php" method="post">
