@@ -27,8 +27,8 @@
 <form enctype="multipart/form-data" action="sources.php">
 	&nbsp
 	<div class="form_select">
-		<select name="topic">
-			<!-- <option value="NULL"> Topic </option>-->
+		<select name="topic" value="Select a topic">
+			<!--<option value="NULL"> Topic </option>-->
 			<option value="Computer Science"> Computer Science </option>
 		</select>
 	&nbsp
