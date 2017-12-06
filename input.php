@@ -28,17 +28,17 @@
 	&nbsp
 	<div class="form_select">
 		<select name="topic">
-			<option value="NULL"> Topic </option>
+			<!-- <option value="NULL"> Topic </option>-->
 			<option value="Computer Science"> Computer Science </option>
 		</select>
 	&nbsp
 		<select name="subTopic">
-			<option value="NULL"> Sub-topic </option>
+			<!-- <option value="NULL"> Sub-topic </option>-->
 			<option value="Algorithms"> Algorithms </option>
 		</select>
 	&nbsp
 		<select name="difficulty">
-			<option value="NULL"> Difficulty </option>
+			<!-- <option value="NULL"> Difficulty </option>-->
 			<option value="Easy"> Easy </option>
 			<option value="Intermediate"> Intermediate </option>
 			<option value="Advanced"> Advanced </option>
