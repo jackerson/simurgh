@@ -10,6 +10,8 @@
 	$topic = $_REQUEST['topic'];
 	$subTopic = $_REQUEST['subTopic'];
 	$difficulty = $_REQUEST['difficulty'];
+	
+
 	if(!isser($topic)){
 		die("No topic input, please try again");
 	}
@@ -53,6 +55,14 @@
 
 	?>
 	<input type="submit" value="Submit">
+	<?php 
+		// Scoring: up/down vote system 
+	
+
+
+
+	?>
+
 </form>
 </body>
 </html>
