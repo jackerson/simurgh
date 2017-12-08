@@ -40,7 +40,7 @@
 	</head>
 	<body>
 		<h1>Email Reset for Simurgh!</h1></br>
-		<p> Welcome to Simurgh! To reset your password <a href='localhost/simurgh/resetPasswordForm.php?userId=$userId&key=$key'>Click Here</a></p>
+		<p> Welcome to Simurgh! To reset your password <a href='simurgh.brobinfamily.com/resetPasswordForm.php?userId=$userId&key=$key'>Click Here</a></p>
 	</body>
 	</html>
 	";
