@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Links</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
 <?php
@@ -52,29 +53,48 @@
 
 	?>
 	<input type="submit" value="Submit">
-	
+</form>
 	<?php 
-	$sortingQuery = mysqli_prepare($connection, "SELECT url, rank, type FROM links WHERE subTopicId = ? ORDER BY rank DESC");
+	$sortingQuery = mysqli_prepare($connection, "SELECT id, url, rank, type FROM links WHERE subTopicId = ? ORDER BY rank DESC");
 	mysqli_stmt_bind_param($sortingQuery, "d", $subTopic);
 	if(!mysqli_stmt_execute($sortingQuery)){
 		die("SQL Query Failed: ".mysqli_error($connection));
 	}
 	//when executed, bind variables
-	mysqli_stmt_bind_result($sortingQuery, $url, $rank, $type);	
+	mysqli_stmt_bind_result($sortingQuery, $id, $url, $rank, $type);	
 	?>
 	</br>
+	<script>
+		$(document).ready(function(){
+			$('.voting').click(function(){
+				var upDown = $(this).attr('name');
+				var id = $(this).attr('value');
+				console.log(upDown);
+				console.log(id);
+				var ajaxurl = 'ranking.php?upDown='+upDown+'&id='+id;
+				$.post(ajaxurl, function(response) {
+					console.log(response);
+					location.reload();
+				});
+			});
+		});
+	</script>
 	<table>
 		<tr>
 			<th>URL</th>
 			<th>Rank</th>
-			<th>Type</th>		
+			<th>Type</th>
+			<th>Vote Up</th>
+			<th>Vote Down</th>
 		</tr>
 	<?php
 	while(mysqli_stmt_fetch($sortingQuery)){//looping through each row in the table
 		echo "<tr>";
 		echo "<td>$url</td>";
 		echo "<td>$rank</td>";
-		echo "<td>$type</td>";		
+		echo "<td>$type</td>";
+		echo "<td><button class = 'voting' name = 'up' value = '$id'>Up</button></td>";
+		echo "<td><button class = 'voting' name = 'down' value = '$id'>Down</button></td>";
 		echo "</tr>";
 	}
 	
@@ -82,6 +102,5 @@
 	mysqli_close($connection);
 	?>
 	</table>
-</form>
 </body>
 </html>
