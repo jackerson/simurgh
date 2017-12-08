@@ -25,29 +25,37 @@
 <img src="logo.jpg" width="200px" height="200px">
 
 <form enctype="multipart/form-data" action="sources.php">
-	&nbsp
-	<div class="form_select">
-		<select name="topic">
-			<option value="NULL"> Topic </option>
-			<option value="Computer Science"> Computer Science </option>
-		</select>
-	&nbsp
+	Topic:&nbsp 
+		<select name="topic" >
+		<!-- List topics with php -->
+			<?php
+				$query = "SELECT name, id from topic order by name";
+				$result = mysqli_query($connection, $query);
+				while($row = mysqli_fetch_array($result))
+				{
+					echo "<option value='$row[1]'>$row[0]</option>";
+				}
+			?>
+		</select><br>
+	Sub Topic:&nbsp
 		<select name="subTopic">
-			<option value="NULL"> Sub-topic </option>
-			<option value="Algorithms"> Algorithms </option>
-		</select>
-	&nbsp
+		<!-- List subtopics with php -->
+			<?php
+				$query = "SELECT name, id from subtopic order by name";
+				$result = mysqli_query($connection, $query);
+				while($row = mysqli_fetch_array($result))
+				{
+					echo "<option value='$row[1]'>$row[0]</option>";
+				}
+			?>
+		</select><br>
+	Difficulty:&nbsp 
 		<select name="difficulty">
-			<option value="NULL"> Difficulty </option>
 			<option value="Easy"> Easy </option>
 			<option value="Intermediate"> Intermediate </option>
 			<option value="Advanced"> Advanced </option>
-		</select>
-	</div>
-
-<div class="select_input">
+		</select><br>
 <input type="submit" value="Search" />
-</div>
 </form>
 <h5><i>Knowledge is a weapon. I intend to be formidably armed.<i></h5>
 <div class="footer">

@@ -9,15 +9,14 @@
 	include "included.php";
 	//$topic = $_REQUEST['topic'];
 	$subTopic = $_REQUEST['subTopic'];
-	$difficulty = $_REQUEST['difficulty'];
+	$difficulty = $_REQUEST['Difficulty'];
 	$type = $_REQUEST['type'];
-	$quality = $_REQUEST['quality'];
 	$url = $_REQUEST['URL'];
 	
 	//TODO:Make duplicate checking better, so that google.com and www.google.com are different. (Once option would be to format all links in a consistent way
 	//TODO: Take care of SQL injection
-	$checkQuery = mysqli_prepare($connection, "SELECT * from links where url = ? AND subTopicId =(SELECT id from subtopic where name = ?)");
-	mysqli_stmt_bind_param($checkQuery,"ss",$url, $subTopic);
+	$checkQuery = mysqli_prepare($connection, "SELECT * from links where url = ? AND subTopicId = ?");
+	mysqli_stmt_bind_param($checkQuery,"sd",$url, $subTopic);
 	//Check if it ran correctly
 	if(!mysqli_stmt_execute($checkQuery)){
 		die("Checking Failed: ".mysqli_error($connection));
@@ -29,8 +28,8 @@
 	}
 	else
 	{
-		$insertQuery = mysqli_prepare($connection, "Insert into links (subTopicId, type, difficulty, quality, url)values ((SELECT id from subtopic where name =?), ?, ? , ?, ?)");
-		mysqli_stmt_bind_param($insertQuery, "ssdds", $subTopic, $type, $difficulty, $quality, $url);
+		$insertQuery = mysqli_prepare($connection, "Insert into links (subTopicId, type, difficulty, url)values (?, ?, ? , ?)");
+		mysqli_stmt_bind_param($insertQuery, "dsds", $subTopic, $type, $difficulty, $url);
 		
 		if(mysqli_stmt_execute($insertQuery))
 		{
