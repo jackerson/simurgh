@@ -53,18 +53,16 @@
 	?>
 	<input type="submit" value="Submit">
 	<?php 
-	//$sortingQuery = mysqli_prepare($connection, "SELECT url, rank, type FROM links ORDER BY rank DESC WHERE topic = ?");
-	//mysqli_stmt_bind_param($sortingQuery, "s", $subTopic);
-	//mysqli_
-	$sql = "SELECT url, rank, type FROM links ORDER BY rank DESC";
-	$result = mysqli_query($sql);
-	if(!$result){
-		echo 'SQL Query Failed';
-	}else{	// Scoring: up/down vote system 
+	$sortingQuery = mysqli_prepare($connection, "SELECT url, rank, type FROM links ORDER BY rank DESC WHERE subtopicId = ?");
+	mysqli_stmt_bind_param($sortingQuery, "d", $subTopic);
+	if(!mysqli_stmt_execute($sortingQuery){
+		die("SQL Query Failed: ".mysqli_error($connection));
+	}
+	//when executed, bind variables
+	mysqli_stmt_bind_result($sortingQuery, $url, $rank, $type);	
 	
-		while($row = mysqli_fetch_array($result)){
-			echo $row;
-		}
+	while(mysqli_stmt_fetch($sortingQuery){//looping through each row in the table
+		echo $url. $rank. $type;
 	}
 	
 	
