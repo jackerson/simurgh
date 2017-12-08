@@ -52,23 +52,36 @@
 
 	?>
 	<input type="submit" value="Submit">
+	
 	<?php 
-	$sortingQuery = mysqli_prepare($connection, "SELECT url, rank, type FROM links ORDER BY rank DESC WHERE subtopicId = ?");
+	$sortingQuery = mysqli_prepare($connection, "SELECT url, rank, type FROM links WHERE subTopicId = ? ORDER BY rank DESC");
 	mysqli_stmt_bind_param($sortingQuery, "d", $subTopic);
-	if(!mysqli_stmt_execute($sortingQuery){
+	if(!mysqli_stmt_execute($sortingQuery)){
 		die("SQL Query Failed: ".mysqli_error($connection));
 	}
 	//when executed, bind variables
 	mysqli_stmt_bind_result($sortingQuery, $url, $rank, $type);	
-	
-	while(mysqli_stmt_fetch($sortingQuery){//looping through each row in the table
-		echo $url. $rank. $type;
+	?>
+	</br>
+	<table>
+		<tr>
+			<th>URL</th>
+			<th>Rank</th>
+			<th>Type</th>		
+		</tr>
+	<?php
+	while(mysqli_stmt_fetch($sortingQuery)){//looping through each row in the table
+		echo "<tr>";
+		echo "<td>$url</td>";
+		echo "<td>$rank</td>";
+		echo "<td>$type</td>";		
+		echo "</tr>";
 	}
 	
 	
 	mysqli_close($connection);
 	?>
-
+	</table>
 </form>
 </body>
 </html>
