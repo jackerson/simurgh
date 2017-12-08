@@ -52,7 +52,7 @@
 <h5><i>Knowledge is a weapon. I intend to be formidably armed.<i></h5>
 <div class="footer">
 <hr class="fancy-line"></hr>
-<p>Made with magic by Jaimie Ackerson, Ian Brobin, Faisal Lalani, Keiran Pirie, & Karl Todd</p>
+<p>Made with magic by Jamie Ackerson, Ian Brobin, Faisal Lalani, Keiran Pirie, & Karl Todd</p>
 </div>
 </body>
 </html>

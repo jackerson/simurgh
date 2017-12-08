@@ -31,7 +31,7 @@ CREATE TABLE if not exists `links` (
    `subTopicId` int(32) not null,
    `type` varchar(32),
    `difficulty` double,
-   `quality` double,
+   `rank` int(32),
    `url` text,
    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;

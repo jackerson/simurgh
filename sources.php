@@ -6,7 +6,10 @@
 </head>
 <body>
 <?php
+
+
 	if(!isset($_REQUEST['topic'])){
+
 		die("No topic input, please try again");
 	}
 	
@@ -50,6 +53,14 @@
 
 	?>
 	<input type="submit" value="Submit">
+	<?php 
+		// Scoring: up/down vote system 
+	
+
+
+
+	?>
+
 </form>
 </body>
 </html>
