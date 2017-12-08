@@ -1,7 +1,7 @@
 <?php
 session_start();
-$connection = @mysqli_connect ("127.0.0.1", "root",
-	"", "simurgh");
+$connection = @mysqli_connect ("45.40.164.83", "simurgh",
+    "CU4l!feSkoBufs", "simurgh");
 	if(mysqli_connect_errno())
 		die("FALIED TO CONNECT TO DATABASE");
 function curPageURL() {

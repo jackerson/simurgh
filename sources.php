@@ -6,10 +6,9 @@
 </head>
 <body>
 <?php
-
+	include "included.php";
 
 	if(!isset($_REQUEST['topic'])){
-
 		die("No topic input, please try again");
 	}
 	
@@ -54,11 +53,22 @@
 	?>
 	<input type="submit" value="Submit">
 	<?php 
-		// Scoring: up/down vote system 
+	//$sortingQuery = mysqli_prepare($connection, "SELECT url, rank, type FROM links ORDER BY rank DESC WHERE topic = ?");
+	//mysqli_stmt_bind_param($sortingQuery, "s", $subTopic);
+	//mysqli_
+	$sql = "SELECT url, rank, type FROM links ORDER BY rank DESC";
+	$result = mysqli_query($sql);
+	if(!$result){
+		echo 'SQL Query Failed';
+	}else{	// Scoring: up/down vote system 
 	
-
-
-
+		while($row = mysqli_fetch_array($result)){
+			echo $row;
+		}
+	}
+	
+	
+	mysqli_close($connection);
 	?>
 
 </form>
