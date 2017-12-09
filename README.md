@@ -2,8 +2,12 @@
 <b>Created by Keiran Pirie, Faisal Lalani, Ian Brobin, Karl Todd and Jamie Ackerson</b>
 
 <p align="center">
+<img src="https://i.imgur.com/cmoJ8gU.png" height=200 width=200>
+</p>
+
+<p align="center">
 <img src="https://img.shields.io/badge/version-1.0-brightgreen.svg">
-<img src="https://img.shields.io/badge/platform-iOS & Android-blue.svg">
+<img src="https://img.shields.io/badge/platform-Web-blue.svg">
 <img src="https://img.shields.io/badge/stage-development-red.svg">
 </p>
 
