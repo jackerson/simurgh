@@ -4,6 +4,7 @@ $connection = @mysqli_connect ("45.40.164.83", "simurgh",
     "CU4l!feSkoBufs", "simurgh");
 	if(mysqli_connect_errno())
 		die("FALIED TO CONNECT TO DATABASE");
+
 function curPageURL() {
  $pageURL = 'http';
  if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
@@ -15,6 +16,7 @@ function curPageURL() {
  }
  return $pageURL;
 }
+
 function generateRandomString($length = 20) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
@@ -33,12 +35,34 @@ function sendEmail($to, $subject, $htmlMsg){
 	return mail($to, $subject, $htmlMsg, implode("\r\n", $headers));
 }
 
-if(isset($_SESSION["email"])){
-	$email = $_SESSION["email"];
-	echo "$email is signed in. <a href='logout.php'>Click Here</a> to sign out</br>";
-}
-else
-{
-	echo "No one is signed in</br>";
-}
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Simurgh</title>
+<base href="http://localhost/simurgh/" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="input.css">
+</head>
+<body class="centered-wrapper">
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">Simurgh</a>
+  <?php
+  if(isset($_SESSION["email"])){
+  	$email = $_SESSION["email"];
+  	echo "$email is signed in. <a href='logout.php'>Click Here</a> to sign out</br>";
+  }
+  else
+  {
+  	echo "No one is signed in</br>";
+  }
+  ?>
+</nav>
+
+<img class="logo" src="logo.jpg" width="200px" height="200px">
