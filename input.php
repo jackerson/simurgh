@@ -28,7 +28,6 @@
 		</select>
 	&nbsp
 		<select name="difficulty">
-			<option value="NULL"> Difficulty </option>
 			<option value="Easy"> Easy </option>
 			<option value="Intermediate"> Intermediate </option>
 			<option value="Advanced"> Advanced </option>

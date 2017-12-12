@@ -52,7 +52,7 @@ function sendEmail($to, $subject, $htmlMsg){
 </head>
 <body class="centered-wrapper">
 <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="#">Simurgh</a>
+  <a class="navbar-brand" href="input.php">Simurgh</a>
   <?php
   if(isset($_SESSION["email"])){
   	$email = $_SESSION["email"];
@@ -60,7 +60,7 @@ function sendEmail($to, $subject, $htmlMsg){
   }
   else
   {
-  	echo "No one is signed in</br>";
+  	echo "<a href='signInForm.php'>Login or signup</a></br>";
   }
   ?>
 </nav>
