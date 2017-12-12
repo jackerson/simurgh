@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Forgot Password</title>
-</head>
-<body>
 <?php
 	include "included.php";
 ?>
+<div class="signForm">
 <h1>Forgot Password</h1>
 <form method="post" action="forgotPassword.php">
-	Email: <input type="text" name="email"/></br>
-	<input type="submit" value="submit"/>
+	<input class="url_field" type="text" name="email" placeholder="Enter your email"/></br>
+	<input class="input_button" type="submit" value="Submit"/>
 </form>
+</div>
 <?php
 	mysqli_close($connection);
 ?>

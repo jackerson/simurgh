@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Sign Up</title>
-	</head>
-	<body>
-	<?php
-		include "included.php";
-	?>
+<?php
+	include "included.php";
+?>
+<div class="signForm">
+	<h1>Sign up</h1>
 		<form method = "post"  action="signUp.php">
-			Email: <input type="text" name="email"/></br>
-			Password: <input type="password" name="password"/></br>
-			Retype Password: <input type="password" name="password2"/></br>
-			<input type="submit" value="submit" />
+			<input class="url_field" type="text" name="email" placeholder="Email"/></br>
+			<input class="url_field" type="password" name="password" placeholder="Password"/></br>
+			<input class="url_field" type="password" name="password2" placeholder="Confirm Password"/></br>
+			<input class="input_button" type="submit" value="Submit" />
 		</form>
+		<a class="signLink" href="signInForm"><p>Already have an account? Log in!</p></a>
+	</div>
 	<?php
 		mysqli_close($connection);
 	?>

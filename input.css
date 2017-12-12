@@ -127,11 +127,17 @@ h5 {
   background: #F8F8FF;
   height: 50px;
   width: 20%;
+  margin: 20px;
 }
 
 img {
 
   text-align: center;
+}
+
+h1 {
+
+  margin: 50px;
 }
 
 #vote {
@@ -154,4 +160,14 @@ h2 {
   color: black;
   font-size: 2em;
   margin: 20px;
+}
+
+.signForm {
+
+  text-align: center;
+}
+
+.signLink {
+
+  margin: 50px;
 }
