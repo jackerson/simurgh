@@ -104,6 +104,12 @@ include "included.php";
 		</select><br>
 		&nbsp
 			<input name="URL" class="url_field" type="text" placeholder="URL"><br>
+			<!-- Data that was already passed earlier -->
+	<?php
+		//echo "<input type='hidden' name='topic' value='$topic'>";
+		echo "<input type='hidden' name='subTopic' value='$subTopic'>";
+
+	?>
 		</div>
 
 	<div class="select_input">
