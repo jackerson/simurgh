@@ -22,12 +22,12 @@
 		die("No ID found.");
 	}
 	mysqli_stmt_close($rankQuery);
-	echo $rank;
-	if($upDown = "up"){
+	if($upDown == "up"){
 		$rank++;
-	}else
+	}
+	else{
 		$rank--;
-	
+	}
 	$upDownQuery = mysqli_prepare($connection, "UPDATE links SET rank = $rank where id = $linkId");
 	
 	if(!mysqli_stmt_execute($upDownQuery)){

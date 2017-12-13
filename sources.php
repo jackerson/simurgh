@@ -28,6 +28,8 @@ include "included.php";
 	mysqli_stmt_bind_result($sortingQuery, $id, $url, $rank, $type);
 	?>
 	</br>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('.voting').click(function(){
@@ -73,13 +75,14 @@ include "included.php";
 			echo "<br>";
 			echo "<h3 class='item_header'>Article</h2>";
 		}
+		echo "</a>";
 		#echo "$rank";
-		echo "<img src='thumbsup.png' id='vote'>";
+		echo "<img src='thumbsup.png' class = 'voting' id = 'like' name = 'up' value = '$id'>";
 		echo "<span class='rank'>$rank</span>";
-		echo "<img src='thumbsdown.png' id='vote'>";
+		echo "<img src='thumbsdown.png' class = 'voting' id = 'dislike' name = 'down' value = '$id'>";
 		#echo "<button class = 'voting' id = 'like' name = 'up' value = '$id'><span>Like</span></button>";
 		#echo "<button class = 'voting' id = 'dislike' name = 'down' value = '$id'><span>Dislike</span></button>";
-		echo "</div></a>";
+		echo "</div>";
 	}
 
 	mysqli_close($connection);
