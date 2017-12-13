@@ -56,7 +56,7 @@ function sendEmail($to, $subject, $htmlMsg){
   <?php
   if(isset($_SESSION["email"])){
   	$email = $_SESSION["email"];
-  	echo "$email is signed in. <a href='logout.php'>Click Here</a> to sign out</br>";
+  	echo "$email is signed in.&nbsp;<a href='logout.php'>Click Here </a>&nbsp;to sign out</br>";
   }
   else
   {
